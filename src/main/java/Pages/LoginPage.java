@@ -12,6 +12,10 @@ public class LoginPage extends BasePage {
     }
 
     public void login(Account account) {
+        /*
+        WebElement input_username = driver.findElement(locators.INPUT_USERNAME);
+        input_username.sendKeys(account.getUsername());
+         */
         setText(locators.INPUT_USERNAME, account.getUsername());
         setText(locators.INPUT_PASSWORD, account.getPassword());
         click(locators.BUTTON_LOGIN);
