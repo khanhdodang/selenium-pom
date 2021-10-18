@@ -46,16 +46,20 @@ public class TestProduct {
         productPage.compareProducts(actualProducts, expectedProducts);
     }
 
-    @Test(priority = 2, groups = {"ui", "functional"}, description = "Verify Add to Cart and Remove button")
-    public void testAddToCart_Remove() {
+    @Test(priority = 2, groups = {"ui", "functional"}, description = "Verify Add to Cart button")
+    public void testAddToCart() {
         for (int i = 1; i < productPage.getProductItemsSize(); i++) {
             productPage.click_ProductItem(i, "add");
             // Verify Button Add to cart
+        }
+    }
 
+    @Test(priority = 3, groups = {"ui", "functional"}, description = "Verify Remove button")
+    public void testRemove() {
+        for (int i = 1; i < productPage.getProductItemsSize(); i++) {
             productPage.click_ProductItem(i, "remove");
             // Verify Button Remove
         }
     }
-
 
 }
