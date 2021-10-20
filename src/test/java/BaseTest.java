@@ -16,6 +16,6 @@ public class BaseTest {
 
     @AfterClass
     public void tearDown() {
-        basePage.quit();
+        basePage.cleanUp();
     }
 }

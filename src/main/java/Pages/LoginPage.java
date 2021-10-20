@@ -21,5 +21,8 @@ public class LoginPage extends BasePage {
         click(locators.BUTTON_LOGIN);
     }
 
+    public String getLoginError() {
+        return getText(locators.LABEL_ERROR);
+    }
 
 }

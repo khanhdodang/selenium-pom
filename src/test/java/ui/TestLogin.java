@@ -31,7 +31,7 @@ public class TestLogin {
 
     @AfterTest
     public void tearDown() {
-        basePage.quit();
+        basePage.cleanUp();
     }
 
     @Test(priority = 2, groups = {"ui", "regression"}, description = "Verify Login Successfully")

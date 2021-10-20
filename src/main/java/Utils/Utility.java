@@ -1,5 +1,6 @@
 package Utils;
 
+import Objects.Account;
 import Objects.Product;
 
 import java.io.File;
@@ -51,5 +52,21 @@ public class Utility {
         product.setDesc(arr[1]);
         product.setPrice(arr[2]);
         return product;
+    }
+
+    /**
+     * Convert a string to an Account object
+     * @param string
+     * @param delimiter
+     * @return an Account
+     */
+    public static Account convertStringToAccount(String string, String delimiter) {
+        Account account = new Account();
+        String[] array = string.split(delimiter);
+        account.setUsername(array[0]);
+        account.setPassword(array[1]);
+        System.out.println(account.getUsername());
+        System.out.println(account.getPassword());
+        return account;
     }
 }

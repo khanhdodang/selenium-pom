@@ -35,4 +35,14 @@ public class Data {
 
         return productArrayList;
     }
+
+    public static ArrayList<Account> getAccounts() {
+        ArrayList<Account> accounts = new ArrayList<>();
+        ArrayList<String> arrayList = Utility.readCSV(Constants.ACCOUNTS_FILE);
+
+        for (int i = 0; i < arrayList.size(); i++) {
+            accounts.add(Utility.convertStringToAccount(arrayList.get(i), ";"));
+        }
+        return accounts;
+    }
 }

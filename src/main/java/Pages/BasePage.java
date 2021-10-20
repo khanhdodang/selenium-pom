@@ -54,6 +54,21 @@ public class BasePage {
     }
 
     /**
+     * Check element displays or not
+     * @param by
+     * @return
+     */
+    public boolean isDisplayed(By by) {
+        Reporter.log("Check if the element exists");
+        try {
+            WebElement element = driver.findElement(by);
+            return element.isDisplayed();
+        } catch (Exception exception) {
+            return false;
+        }
+    }
+
+    /**
      * Get text of an element
      *
      * @param by receive the element
@@ -107,7 +122,7 @@ public class BasePage {
     /**
      * Terminate test session
      */
-    public void quit() {
+    public void cleanUp() {
         driver.quit();
     }
 }

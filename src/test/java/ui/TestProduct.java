@@ -35,7 +35,7 @@ public class TestProduct {
 
     @AfterClass
     public void tearDown() {
-        basePage.quit();
+        basePage.cleanUp();
     }
 
     @Test(priority = 1, groups = {"ui", "functional"}, description = "Verify Product list")

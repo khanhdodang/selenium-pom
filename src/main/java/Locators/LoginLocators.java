@@ -6,4 +6,5 @@ public class LoginLocators {
     public By INPUT_USERNAME = By.id("user-name");
     public By INPUT_PASSWORD = By.id("password");
     public By BUTTON_LOGIN = By.id("login-button");
+    public By LABEL_ERROR = By.xpath("//h3[@data-test='error']");
 }
