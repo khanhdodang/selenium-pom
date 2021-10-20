@@ -84,6 +84,7 @@ public class BasePage {
     public void setText(By by, String text) {
         Reporter.log("Set text on the element by locator " + by.toString() + " with the value: " + text);
         WebElement element = driver.findElement(by);
+        element.clear();
         element.sendKeys(text);
     }
 

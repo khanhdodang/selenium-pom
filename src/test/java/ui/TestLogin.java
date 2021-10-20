@@ -34,7 +34,7 @@ public class TestLogin {
         basePage.quit();
     }
 
-    @Test(priority = 1, groups = {"ui", "regression"}, description = "Verify Login Successfully")
+    @Test(priority = 2, groups = {"ui", "regression"}, description = "Verify Login Successfully")
     public void testLoginSuccess() {
         Account standard_acc = Data.getDefaultAccount();
         loginPage.login(standard_acc);
@@ -42,7 +42,7 @@ public class TestLogin {
         Assert.assertTrue(loginPage.getUrl().contains("inventory"));
     }
 
-    @Test(priority = 2, groups = {"ui", "regression"}, description = "Verify Login Unsuccessfully")
+    @Test(priority = 1, groups = {"ui", "regression"}, description = "Verify Login Unsuccessfully")
     public void testLoginInvalidCredentials() {
         Account invalidAccount = new Account();
         invalidAccount.setUsername("khanh");
